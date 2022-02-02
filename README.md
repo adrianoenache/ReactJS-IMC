@@ -1,2 +1,2 @@
-# ReactJS-ShortURL
-ReactJS Short URL (My first React app)
+# ReactJS-IMC
+ReactJS IMC calculator (My first React app)

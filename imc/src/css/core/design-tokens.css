@@ -1,0 +1,104 @@
+/*
+  Media querys
+  These values were chosen after analyzing the data from this source https://gs.statcounter.com/
+  <=425 Mobile
+  426..1024 Tablet
+  1025..1440 Notebooks
+  >=1441 Desktops and Notebooks FullHD
+*/
+
+/* Import webfonts */
+@import url("https://fonts.googleapis.com/css2?family=Kufam:ital,wght@0,400;0,700;1,400;1,700&&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap");
+
+:root {
+  /* Primitive color values */
+  --color-01: #000000;
+  --color-01-rgb: 0, 0, 0;
+  --color-02: #ffffff;
+  --color-02-rgb: 255, 255, 255;
+  --color-03: #00aa00;
+  --color-03-rgb: 0, 170, 0;
+  --color-04: #aaaaaa;
+  --color-04-rgb: 170, 170, 170;
+  --color-05: #777777;
+  --color-05-rgb: 119, 119, 119;
+  --color-06: #ff0000;
+  --color-06-rgb: 255, 0, 0;
+  /* Base sizes */
+  --main-font-size: 16px;
+  --gutter: 10px;
+  --column: 70px;
+  /* Grid */
+  --grid-tablet: calc(((var(--column) + var(--gutter)) * 8) - var(--gutter));
+  --grid-mobile: calc(((var(--column) + var(--gutter)) * 4) - var(--gutter));
+  --grid: var(--grid-mobile);
+  /* Fonts */
+  --font-family-titles: "Sansita Swashed", cursive; /* 500 */
+  --font-family-titles-weight: 500;
+  --font-family-text: "Kufam", cursive; /* 400, 400i, 700, 700i */
+  --font-family-text-weight-regular: 400;
+  --font-family-text-weight-bold: 700;
+  --font-family-detail: "Raleway", sans-serif; /* 300 */
+  --font-family-detail-weight: 300;
+  /* Font sizes */
+  --font-size-xxs: calc(var(--main-font-size) * 0.75); /* 12px */
+  --font-size-xs: calc(var(--main-font-size) * 0.875); /* 14px */
+  --font-size-s: calc(var(--main-font-size) * 1); /* 16px */
+  --font-size-m: calc(var(--main-font-size) * 1.25); /* 20px */
+  --font-size-l: calc(var(--main-font-size) * 1.5); /* 24px */
+  --font-size-xl: calc(var(--main-font-size) * 2); /* 32px */
+  --font-size-xxl: calc(var(--main-font-size) * 4); /* 64px */
+  /* Space sizes */
+  --space-size-xxs: calc(var(--gutter) * 0.5); /* 5px */
+  --space-size-xs: calc(var(--gutter) * 1); /* 10px */
+  --space-size-s: calc(var(--gutter) * 2); /* 20px */
+  --space-size-m: calc(var(--gutter) * 4); /* 40px */
+  --space-size-l: calc(var(--gutter) * 6); /* 60px */
+  --space-size-xl: calc(var(--gutter) * 8); /* 80px */
+  --space-size-xxl: calc(var(--gutter) * 10); /* 100px */
+  /* Border size */
+  --border-size-xxs: 1px;
+  --border-size-xs: 2px;
+  /* Border radius */
+  --border-radius-xxs: 3px;
+  --border-radius-xs: 5px;
+  --border-radius-s: 7px;
+  --border-radius-m: 14px;
+  /* Opacity levels */
+  --opacity-0: 0;
+  --opacity-1: 1;
+  --opacity-xs: .15;
+  --opacity-s: .30;
+  --opacity-m: .5;
+  --opacity-l: .70;
+  --opacity-xl: .85;
+  /* Z-index */
+  --behind: 1;
+  --content: 5;
+  --above: 10;
+  --modal: 15;
+  /* Shadows */
+  --shadow: 2px 2px 2px 1px rgba(var(--color-01-rgb), var(--opacity-m));
+  --shadow-hover: 3px 3px 2px 2px rgba(var(--color-01-rgb), var(--opacity-xs));
+  /* Transition timing and type */
+  --transition-1: .3s ease-in-out;
+}
+
+/* Mobile */
+@media only screen and (max-width: 425px) {
+  :root {
+    /* Font sizes scaled down for mobile */
+    --font-size-l: calc((var(--main-font-size) * 1.5) * 0.875); /* 21px */
+    --font-size-xl: calc((var(--main-font-size) * 2) * 0.875); /* 28px */
+    --font-size-xxl: calc((var(--main-font-size) * 4) * 0.75); /* 48px */
+  }
+}
+
+/* Tablet */
+@media only screen and (min-width: 426px) {
+  :root {
+    --grid: var(--grid-tablet);
+  }
+}

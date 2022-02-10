@@ -1,0 +1,57 @@
+html {
+  --main-background-color: var(--color-02);
+  --main-font-size: var(--font-size-s);
+  --stage-background-desktop: url("../../media/stage/pexels-photo-235990-pixabay-w1920.jpeg");
+  --stage-background-notebook: url("../../media/stage/pexels-photo-235990-pixabay-w1366.jpeg");
+  --stage-background-tablet: url("../../media/stage/pexels-photo-235990-pixabay-h1024.jpeg");
+  --stage-background-mobile: url("../../media/stage/pexels-photo-235990-pixabay-h736.jpeg");
+  --stage-background: var(--stage-background-mobile);
+  --stage-background-position-notebook: top right;
+  --stage-background-position-mobile: bottom center;
+  --stage-background-position: var(--stage-background-position-mobile);
+  /* Rules */
+  background-color: var(--main-background-color);
+  background-image: var(--stage-background);
+  background-position: var(--stage-background-position);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body {
+  --main-text-color: var(--color-01);
+  /* Rules */
+  align-items: center;
+  color: var(--main-text-color);
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-family-text);
+  font-weight: var(--font-family-text-weight-regular);
+  height: 100%;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: var(--grid);
+  min-height: 100vh;
+}
+
+
+/* Tablet */
+@media only screen and (min-width: 426px) {
+  html {
+    --stage-background: var(--stage-background-tablet);
+  }
+}
+
+/* Notebook */
+@media only screen and (min-width: 1025px) {
+  html {
+    --stage-background: var(--stage-background-notebook);
+    --stage-background-position: var(--stage-background-position-notebook);
+  }
+}
+
+/* Desktop */
+@media only screen and (min-width: 1441px) {
+  html {
+    --stage-background: var(--stage-background-desktop);
+  }
+}

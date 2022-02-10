@@ -1,0 +1,175 @@
+@import "../../css/components/box.css";
+@import "../../css/components/text-cut-out.css";
+
+.app {
+  --app-border-radius: var(--border-radius-m);
+  --app-color-valid-fields: var(--color-03);
+  --app-margin-of-buttons: var(--space-size-xs);
+  --app-color-border-wrapper-fields: var(--color-05);
+  --app-color-border-buttom: var(--color-04);
+  --app-buttom-content-font-size-tablet: var(--main-font-size);
+  --app-buttom-content-font-size-mobile: 0;
+  --app-buttom-content-font-size: var(--app-buttom-content-font-size-mobile);
+  --app-buttom-icon-font-size-tablet: var(--main-font-size);
+  --app-buttom-icon-font-size-mobile: var(--font-size-l);
+  --app-buttom-icon-font-size: var(--app-buttom-icon-font-size-mobile);
+  --app-buttom-border-radius: var(--border-radius-xs);
+  /* HTML icon http://htmlarrows.com/ */
+  --required-icon: "\2731";
+  --valid-icon: "\2714";
+  --submit-icon: "\2696";
+  --recycling-icon: "\267B";
+}
+
+.app .title {
+  border-top-left-radius: var(--app-border-radius);
+  border-top-right-radius: var(--app-border-radius);
+  margin-bottom: 0;
+}
+
+.app .box {
+  border-bottom-left-radius: var(--app-border-radius);
+  border-bottom-right-radius: var(--app-border-radius);
+}
+
+.app .wrapper-fields {
+  border-radius: var(--border-radius-s);
+  border-style: solid;
+  border-color: var(--app-color-border-wrapper-fields);
+  display: flex;
+  flex-direction: column;
+  margin-bottom: var(--app-margin-of-buttons);
+  padding: 0 var(--space-size-s) var(--space-size-s);
+  transition: border var(--transition-1);
+}
+
+.app .box:hover .wrapper-fields {
+  border-color: var(--main-text-color);
+}
+
+.app .wrapper-fields:valid,
+.app .box:hover .wrapper-fields:valid,
+.app .field:valid {
+  border-color: var(--app-color-valid-fields);
+}
+
+.app .label {
+  cursor: pointer;
+  margin-bottom: var(--space-size-xxs);
+  margin-top: var(--space-size-s);
+}
+
+.app .field {
+  border-style: solid;
+  border-radius: var(--border-radius-xxs);
+  padding: var(--space-size-xxs);
+  transition: border var(--transition-1);
+  max-width: 150px;
+}
+
+.app .message {
+  margin-bottom: 0;
+  margin-top: var(--app-margin-of-buttons);
+}
+
+.app .button {
+  -webkit-appearance: none; /* Fix bug on Edge mobile */
+  appearance: none;
+  background-color: var(--color-02);
+  color: var(--color-05);
+  border: solid var(--border-size-xxs) var(--app-color-border-buttom);
+  border-radius: 0;
+  display: inline-flex;
+  vertical-align: top;
+  line-height: 1.35em;
+  padding: 0.15em 0.75em 0;
+  transition: color var(--transition-1);
+}
+
+.app .button:hover {
+  color: var(--color-01);
+}
+
+.app .button::before,
+.app .button::after {
+  font-size: var(--app-buttom-icon-font-size);
+}
+
+.app .button span {
+  font-size: var(--app-buttom-content-font-size);
+}
+
+.app .submit-form::after,
+.app .reset-form::before,
+.app .validate-form::before {
+  display: inline-block;
+}
+
+.app .submit-form {
+  pointer-events: none;
+  border-left: 0;
+  border-right: 0;
+}
+
+.app .submit-form::after {
+  content: var(--submit-icon);
+}
+
+.app .submit-form::after,
+.app .submit-form span {
+ opacity: var(--opacity-s);
+ transition: opacity var(--transition-1);
+}
+
+.app .wrapper-fields:valid ~ .submit-form {
+  pointer-events: all;
+}
+
+.app .wrapper-fields:valid ~ .submit-form::after,
+.app .wrapper-fields:valid ~ .submit-form span {
+ opacity: var(--opacity-1);
+}
+
+.app .validate-form {
+  border-top-right-radius: var(--app-buttom-border-radius);
+  border-bottom-right-radius: var(--app-buttom-border-radius);
+}
+
+.app .validate-form::before {
+  content: var(--valid-icon);
+}
+
+.app .wrapper-fields:valid ~ .validate-form {
+  color: var(--app-color-valid-fields);
+  pointer-events: none;
+}
+
+.app .reset-form {
+  border-top-left-radius: var(--app-buttom-border-radius);
+  border-bottom-left-radius: var(--app-buttom-border-radius);
+}
+
+.app .reset-form::before {
+  content: var(--recycling-icon);
+}
+
+/* Tablet */
+@media only screen and (min-width: 426px) {
+  .app .button span {
+    --app-buttom-content-font-size: var(--app-buttom-content-font-size-tablet);
+  }
+
+  .app .button::before,
+  .app .button::after {
+    --app-buttom-icon-font-size: var(--app-buttom-icon-font-size-tablet);
+  }
+
+  .app .submit-form::after {
+    margin-left: 0.25em;
+  }
+
+  .app .validate-form::before,
+  .app .reset-form::before {
+    margin-right: 0.25em;
+  }
+}

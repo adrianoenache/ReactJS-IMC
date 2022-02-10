@@ -1,0 +1,6 @@
+.text-cut-out {
+  background: black;
+  color: white;
+  mix-blend-mode: multiply;
+  padding: 0.25em;
+}

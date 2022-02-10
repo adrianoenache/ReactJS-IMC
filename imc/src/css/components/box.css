@@ -1,0 +1,23 @@
+.box {
+  --box-bg: var(--color-02-rgb);
+  --box-op: var(--opacity-m);
+  --box-background: rgba(var(--box-bg), var(--box-op));
+  --box-padding-tablet: var(--space-size-m);
+  --box-padding-mobile: var(--space-size-s);
+  --box-padding: var(--box-padding-mobile);
+  /* Rules */
+  background-color: var(--box-background);
+  padding: var(--box-padding);
+  transition: background var(--transition-1);
+}
+
+.box:hover {
+  --box-op: var(--opacity-1);
+}
+
+/* Tablet */
+@media only screen and (min-width: 426px) {
+  .box {
+    --box-padding: var(--box-padding-tablet);
+  }
+}

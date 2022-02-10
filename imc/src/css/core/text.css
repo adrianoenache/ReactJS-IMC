@@ -1,0 +1,15 @@
+h1 {
+  font-family: var(--font-family-titles);
+  font-weight: var(--font-family-titles-weight);
+  line-height: 1em;
+  margin-top: 0;
+}
+
+h1 {
+  font-size: var(--font-size-xxl);
+}
+
+p,
+li {
+  line-height: 1.5em;
+}

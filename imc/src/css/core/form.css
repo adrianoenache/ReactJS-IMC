@@ -13,7 +13,7 @@ textarea {
 
 legend {
   font-family: var(--font-family-titles);
-  font-weight: 700;
+  font-weight: var(--font-family-titles-weight);
   line-height: 1em;
   padding: 0 0.5em;
 }
@@ -23,8 +23,8 @@ input {
   /* Rules */
   border-width: var(--border-size-xxs);
   box-shadow: var(--shadow), var(--fix-autofill);
-  transition: box-shadow var(--transition-1);
   outline: 0;
+  transition: box-shadow var(--transition-1);
 }
 
 input:hover,

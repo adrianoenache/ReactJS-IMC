@@ -3,4 +3,6 @@
 @import "core/stage.css";
 @import "core/text.css";
 @import "core/form.css";
-@import "components/custom-scroll.css"
+@import "components/custom-scroll.css";
+@import "components/box.css";
+@import "components/app-root.css";

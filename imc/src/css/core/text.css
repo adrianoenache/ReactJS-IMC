@@ -13,3 +13,21 @@ p,
 li {
   line-height: 1.5em;
 }
+
+a {
+  --link-color: var(--color-01);
+  --link-color-hover: var(--color-03);
+  /* Rules */
+  outline: 0;
+  transition: color var(--transition-1);
+}
+
+a,
+a:visited {
+  color: var(--link-color);
+}
+
+a:hover,
+a:focus {
+  color: var(--link-color-hover);
+}

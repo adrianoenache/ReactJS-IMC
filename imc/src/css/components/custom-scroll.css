@@ -13,8 +13,8 @@
 /* -webkit- Edge, Chrome, Opera, Safari custom scroll */
 .custom-scroll::-webkit-scrollbar {
   background: var(--scroll-bar-background);
-  width: var(--scroll-bar-width-chromium);
   height: var(--scroll-bar-width-chromium);
+  width: var(--scroll-bar-width-chromium);
 }
 
 .custom-scroll::-webkit-scrollbar-thumb {

@@ -1,4 +1,3 @@
-@import "../../css/components/box.css";
 @import "../../css/components/text-cut-out.css";
 
 .app {
@@ -14,11 +13,16 @@
   --app-buttom-icon-font-size-mobile: var(--font-size-l);
   --app-buttom-icon-font-size: var(--app-buttom-icon-font-size-mobile);
   --app-buttom-border-radius: var(--border-radius-xs);
+  --app-buttom-background: var(--color-02);
+  --app-buttom-color: var(--color-01);
+  --app-buttom-color-hover: var(--color-05);
   /* HTML icon http://htmlarrows.com/ */
   --required-icon: "\2731";
   --valid-icon: "\2714";
   --submit-icon: "\2696";
   --recycling-icon: "\267B";
+  /* Rules */
+  position: relative;
 }
 
 .app .title {
@@ -33,9 +37,9 @@
 }
 
 .app .wrapper-fields {
+  border-color: var(--app-color-border-wrapper-fields);
   border-radius: var(--border-radius-s);
   border-style: solid;
-  border-color: var(--app-color-border-wrapper-fields);
   display: flex;
   flex-direction: column;
   margin-bottom: var(--app-margin-of-buttons);
@@ -60,11 +64,11 @@
 }
 
 .app .field {
-  border-style: solid;
   border-radius: var(--border-radius-xxs);
+  border-style: solid;
+  max-width: 150px;
   padding: var(--space-size-xxs);
   transition: border var(--transition-1);
-  max-width: 150px;
 }
 
 .app .message {
@@ -75,19 +79,19 @@
 .app .button {
   -webkit-appearance: none; /* Fix bug on Edge mobile */
   appearance: none;
-  background-color: var(--color-02);
-  color: var(--color-05);
-  border: solid var(--border-size-xxs) var(--app-color-border-buttom);
+  background-color: var(--app-buttom-background);
   border-radius: 0;
+  border: solid var(--border-size-xxs) var(--app-color-border-buttom);
+  color: var(--app-buttom-color);
   display: inline-flex;
-  vertical-align: top;
   line-height: 1.35em;
   padding: 0.15em 0.75em 0;
   transition: color var(--transition-1);
+  vertical-align: top;
 }
 
 .app .button:hover {
-  color: var(--color-01);
+  color: var(--app-buttom-color-hover);
 }
 
 .app .button::before,
@@ -106,9 +110,9 @@
 }
 
 .app .submit-form {
-  pointer-events: none;
   border-left: 0;
   border-right: 0;
+  pointer-events: none;
 }
 
 .app .submit-form::after {
@@ -131,8 +135,8 @@
 }
 
 .app .validate-form {
-  border-top-right-radius: var(--app-buttom-border-radius);
   border-bottom-right-radius: var(--app-buttom-border-radius);
+  border-top-right-radius: var(--app-buttom-border-radius);
 }
 
 .app .validate-form::before {
@@ -145,8 +149,8 @@
 }
 
 .app .reset-form {
-  border-top-left-radius: var(--app-buttom-border-radius);
   border-bottom-left-radius: var(--app-buttom-border-radius);
+  border-top-left-radius: var(--app-buttom-border-radius);
 }
 
 .app .reset-form::before {

@@ -1,0 +1,53 @@
+#app-root {
+  --link-color: var(--color-04);
+  --link-color-hover: var(--color-03);
+  --open-close-position: 14px;
+  /* Rules */
+  position: relative;
+  transition: transform var(--transition-1);
+}
+
+#app-root .more-info {
+  box-sizing: border-box;
+  height: 100%;
+  left: 0;
+  opacity: var(--opacity-0);
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  transform: rotateY(180deg);
+  transition: opacity var(--transition-1);
+  width: 100%;
+}
+
+#app-root:target {
+  transform: rotateY(180deg);
+}
+
+#app-root:target .more-info {
+  opacity: var(--opacity-1);
+  pointer-events: all;
+}
+
+#app-root .open-more-info,
+#app-root .close-more-info {
+  font-size: 0;
+  position: absolute;
+  right: var(--open-close-position);
+}
+
+#app-root .open-more-info .icon,
+#app-root .close-more-info .icon {
+  --size: var(--font-size-l);
+  /* Rules */
+  height: var(--size);
+  width: var(--size);
+}
+
+#app-root .open-more-info {
+  bottom: var(--open-close-position);
+}
+
+#app-root .close-more-info {
+  top: var(--open-close-position);
+}

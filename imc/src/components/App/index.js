@@ -1,7 +1,7 @@
 // My First app React
-
 import parse from "html-react-parser";
 import { useState } from 'react';
+import { ImNotification } from "react-icons/im";
 import './index.css';
 
 function App() {
@@ -132,6 +132,9 @@ function App() {
         <p className="message">
           {parse(mensagem)}
         </p>
+        <a className="open-more-info" href="#app-root">
+          <ImNotification className="icon close" />Mais informações
+        </a>
       </form>
     </div>
   );

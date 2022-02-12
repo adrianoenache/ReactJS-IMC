@@ -110,6 +110,8 @@
 }
 
 .app .submit-form {
+  --app-buttom-background: var(--color-04);
+  /* Rules */
   border-left: 0;
   border-right: 0;
   pointer-events: none;
@@ -119,19 +121,11 @@
   content: var(--submit-icon);
 }
 
-.app .submit-form::after,
-.app .submit-form span {
- opacity: var(--opacity-s);
- transition: opacity var(--transition-1);
-}
-
 .app .wrapper-fields:valid ~ .submit-form {
+  --app-buttom-background: var(--color-02);
+  /* Rules */
   pointer-events: all;
-}
-
-.app .wrapper-fields:valid ~ .submit-form::after,
-.app .wrapper-fields:valid ~ .submit-form span {
- opacity: var(--opacity-1);
+  transition: background var(--transition-1);
 }
 
 .app .validate-form {
@@ -158,7 +152,7 @@
 }
 
 /* Tablet */
-@media only screen and (min-width: 426px) {
+@media only screen and (min-width: 541px) {
   .app .button span {
     --app-buttom-content-font-size: var(--app-buttom-content-font-size-tablet);
   }

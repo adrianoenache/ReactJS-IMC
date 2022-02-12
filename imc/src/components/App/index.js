@@ -133,7 +133,8 @@ function App() {
           {parse(mensagem)}
         </p>
         <a className="open-more-info" href="#app-root">
-          <ImNotification className="icon close" />Mais informações
+          <ImNotification className="icon" alt="Ícone de mais informações representado pelo caracter 'i' dentro de um aro." />
+          <span className="hide-text">Ao acessar este link abrirá a aba mais informações.</span>
         </a>
       </form>
     </div>

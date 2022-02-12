@@ -1,6 +1,10 @@
 .more-info {
   --more-info-background-rgb: var(--color-07-rgb);
   --more-info-text-color: var(--color-02);
+  --icon-social-size: var(--font-size-xl);
+  --logo-size-tablet: 120px;
+  --logo-size-mobile: 68px;
+  --logo-size: var(--logo-size-mobile);
   /* Rules */
   border-radius: var(--border-radius-m);
   color: var(--more-info-text-color);
@@ -13,14 +17,23 @@
 }
 
 .more-info .wrapper-logo {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   margin: 0 auto;
   text-align: center;
 }
 
-.more-info .logo-link {
+.more-info .logo-link,
+.more-info .logo {
   display: block;
-  margin: 0 auto;
-  width: 25%;
+  height: var(--logo-size);
+  width: var(--logo-size);
+}
+
+.more-info .logo-link {
+  margin-bottom: var(--space-size-xs);
 }
 
 .more-info hr {
@@ -42,14 +55,22 @@
   align-items: center;
   display: flex;
   flex-direction: row;
-  font-size: 0;
   justify-content: space-around;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.more-info .social-list a {
-  font-size: var(--font-size-xl);
-  line-height: 1em;
+.more-info .social-list a,
+.more-info .social-list .icon {
+  display: block;
+  height: var(--icon-social-size);
+  width: var(--icon-social-size);
+}
+
+
+@media only screen and (min-width: 541px) {
+  .more-info {
+    --logo-size: var(--logo-size-tablet);
+  }
 }

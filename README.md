@@ -1,13 +1,13 @@
 # ReactJS-IMC
-ReactJS IMC calculator (My first React app)
 
-https://www.facebook.com/sujeitoprogramador
-https://www.instagram.com/sujeitoprogramador/
-https://www.youtube.com/c/sujeitoprogramador
+[React IMC calculator (My first React app) see it live on this link.](https://adrianoenache.dev.br/imc/)
 
-https://sujeitoprogramador.com/aula-1/
+This project was a introduction for [React framework](https://reactjs.org/) and is my first contact with it. The base idea was given in a [course week](https://www.youtube.com/playlist?list=PLAF5G8rnMmBZQRlBfg6pHIQCXaGcQ8Z2v) that I participated. And I want give congrats the "[SujeitoProgramador](https://sujeitoprogramador.com/)" by give this oportunit to start to use this framework.
 
-https://www.figma.com/file/VXSZsimMlfMf1Ts4WHxAxA/Semana-React-JS?node-id=2%3A155
+The idea is similar, but I changed a lot of things to code, layout and structure folders.
 
-https://sujeitoprogramador.com/aula-1/
-https://www.youtube.com/watch?v=K-8YYSEYaB8
+## Lighthouse ressults for mobile and desktop
+
+![alt lighthouse-mobile](lighthouse-mobile.png)
+
+![alt lighthouse-desktop](lighthouse-desktop.png)

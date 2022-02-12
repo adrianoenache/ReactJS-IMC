@@ -2,6 +2,7 @@
   --link-color: var(--color-04);
   --link-color-hover: var(--color-03);
   --open-close-position: 14px;
+  --size-icon-close-more-info: var(--font-size-l);
   /* Rules */
   position: relative;
   transition: transform var(--transition-1);
@@ -31,17 +32,17 @@
 
 #app-root .open-more-info,
 #app-root .close-more-info {
-  font-size: 0;
   position: absolute;
   right: var(--open-close-position);
 }
 
+#app-root .open-more-info,
+#app-root .close-more-info,
 #app-root .open-more-info .icon,
 #app-root .close-more-info .icon {
-  --size: var(--font-size-l);
-  /* Rules */
-  height: var(--size);
-  width: var(--size);
+  display: block;
+  height: var(--size-icon-close-more-info);
+  width: var(--size-icon-close-more-info);
 }
 
 #app-root .open-more-info {

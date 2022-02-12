@@ -1,8 +1,8 @@
 /*
   Media querys
   These values were chosen after analyzing the data from this source https://gs.statcounter.com/
-  <=425 Mobile
-  426..1024 Tablet
+  <=540 Mobile (my moto G30 (540x1200)
+  541..1024 Tablet
   1025..1440 Notebooks
   >=1441 Desktops and Notebooks FullHD
 */
@@ -89,7 +89,7 @@
 }
 
 /* Mobile */
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 540px) {
   :root {
     /* Font sizes scaled down for mobile */
     --font-size-l: calc((var(--main-font-size) * 1.5) * 0.875); /* 21px */
@@ -99,7 +99,7 @@
 }
 
 /* Tablet */
-@media only screen and (min-width: 426px) {
+@media only screen and (min-width: 541px) {
   :root {
     --grid: var(--grid-tablet);
   }
